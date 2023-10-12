@@ -1,9 +1,3 @@
-<ion-content>
-  <ion-img src="/Users/rahab/Documents/speaker.jpg">
-  </ion-img>
-  <ion-item>
-    <ion-toggle checked="true">Right speaker mute or unmute</ion-toggle>
-  </ion-item>
-  <ion-button shape="round">Mix</ion-button>
-</ion-content>
-
+<ion-img id="image" src="assets/speaker.jpg"></ion-img>
+<ion-toggle [(ngModel)]="rightSpeakerMuted">Right speaker mute or unmute</ion-toggle>
+<ion-button shape="round">Mix</ion-button>

@@ -7,15 +7,15 @@
 </ion-header>
 <ion-content [fullscreen]="true">
   <div id="container">
-    <app-volume></app-volume>
-    <app-balance></app-balance>
-    <ion-grid>
+    <app-volume [(volume)]="volume"></app-volume>
+    <app-balance [(balance)]="balance" (balanceChange)="onBalanceChange($event)"></app-balance>
+    <ion-grid id="grid">
       <ion-row>
-        <ion-col>
-          <app-left-speaker></app-left-speaker>
+        <ion-col id="col">
+          <app-left-speaker [(leftSpeakerMuted)]="leftSpeakerMuted" (leftSpeakerMutedChange)="onLeftSpeakerMutedChange()"></app-left-speaker>
         </ion-col>
-        <ion-col>
-          <app-right-speaker></app-right-speaker>
+        <ion-col id="col">
+          <app-right-speaker [(rightSpeakerMuted)]="rightSpeakerMuted" (rightSpeakerMutedChange)="onRightSpeakerMutedChange()"></app-right-speaker>
         </ion-col>
       </ion-row>
     </ion-grid>

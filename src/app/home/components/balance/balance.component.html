@@ -1,6 +1,4 @@
-<ion-content>
-  <ion-item>
-    <ion-label>balance</ion-label>
-    <ion-range pin="true" ticks="true" snapa="true" value="0" min="-4" max="+4" ></ion-range>
-  </ion-item>
-</ion-content>
+<ion-label>Balance</ion-label>
+<ion-range pin="true" ticks="true" snaps="true" [(ngModel)]="balance" value="0" min="-4" max="4"></ion-range>
+  
+

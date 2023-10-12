@@ -1,6 +1,5 @@
-<ion-content>
-  <ion-item>
+
     <ion-label>Volume</ion-label>
-    <ion-range min="0" max="30" ></ion-range>
-  </ion-item>
-</ion-content>
+    <ion-range [(ngModel)]="volume" min="0" max="30" (ionChange)="onVolumeChange()"></ion-range>
+ 
+
