@@ -1,0 +1,11 @@
+<ion-label>Speaker on mute or unmute</ion-label>
+<ion-toggle id="tog" [(ngModel)]="isMuted"></ion-toggle>
+<br>
+<div>
+<ion-label>Bass</ion-label>
+<ion-range [(ngModel)]="bassVolume" min="-15" max="15" step="1">Bass</ion-range>
+<ion-label>Mid</ion-label>
+<ion-range [(ngModel)]="midVolume" min="-15" max="15" step="1">Mid</ion-range>
+<ion-label>Treble</ion-label>
+<ion-range [(ngModel)]="trebleVolume" min="-15" max="15" step="1">Treble</ion-range>
+</div>
