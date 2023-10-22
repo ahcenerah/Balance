@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+  <div id="container">
+    <ion-label>Volume </ion-label>
+    <ion-label id="vlm">{{ volume }}</ion-label>
+    <ion-range [(ngModel)]="volume" min="0" max="30"></ion-range>
+    <ion-label>Balance </ion-label>
+    <ion-label id="blc">{{ balance }}</ion-label>
+    <ion-range pin="true" ticks="true" snaps="true" [(ngModel)]="balance"(ionChange)="onBalanceChange()" value="0" min="-4" max="4"></ion-range>
+  </div>
+  <ion-grid id="grid">
+    <ion-row>
+      <ion-col id="col">
+        <ion-img id="image" src="assets/speaker.jpg" ></ion-img>
+        <ion-toggle [(ngModel)]="leftSpeakerMuted"(ionChange)="onLeftSpeakerToggleChange()">Left speaker mute or unmute</ion-toggle>
+        <ion-button shape="round" (click)="navigateToLeft()">Mix</ion-button>  
+      </ion-col>
+      <ion-col id="col">
+        <ion-img id="image" src="assets/speaker.jpg" ></ion-img>
+        <ion-toggle [(ngModel)]="rightSpeakerMuted"(ionChange)="onRightSpeakerToggleChange()">Right speaker mute or unmute</ion-toggle>
+        <ion-button shape="round" (click)="navigateToRight()">Mix</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+

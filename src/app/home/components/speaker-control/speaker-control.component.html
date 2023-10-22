@@ -1,11 +1,17 @@
-<ion-label>Speaker on mute or unmute</ion-label>
-<ion-toggle id="tog" [(ngModel)]="isMuted"></ion-toggle>
-<br>
-<div>
-<ion-label>Bass</ion-label>
-<ion-range [(ngModel)]="bassVolume" min="-15" max="15" step="1">Bass</ion-range>
-<ion-label>Mid</ion-label>
-<ion-range [(ngModel)]="midVolume" min="-15" max="15" step="1">Mid</ion-range>
-<ion-label>Treble</ion-label>
-<ion-range [(ngModel)]="trebleVolume" min="-15" max="15" step="1">Treble</ion-range>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ title.getTitle() }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div id="container">
+  <ion-toggle [checked]="true"[(ngModel)]="speakerOn">Speaker on</ion-toggle> <br /><br />
+  <ion-label>Bass </ion-label>
+  <ion-label id="bss">{{ bass }}</ion-label>
+  <ion-range pin="true" ticks="true" snaps="true" [(ngModel)]="bass" value="0" min="-15" max="15"></ion-range>
+  <ion-label>Mid </ion-label>
+  <ion-label id="md">{{ mid }}</ion-label>
+  <ion-range pin="true" ticks="true" snaps="true" [(ngModel)]="mid" value="0" min="-15" max="15"></ion-range>
+  <ion-label>Treble </ion-label>
+  <ion-label id="trb">{{ treble }}</ion-label>
+  <ion-range pin="true" ticks="true" snaps="true" [(ngModel)]="treble" value="0" min="-15" max="15"></ion-range>
 </div>

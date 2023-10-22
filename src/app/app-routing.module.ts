@@ -11,14 +11,8 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    path: 'leftspeaker',
-    loadChildren: () => import('./leftspeaker/leftspeaker.module').then( m => m.LeftspeakerPageModule)
-  },
-  {
-    path: 'rightspeaker',
-    loadChildren: () => import('./rightspeaker/rightspeaker.module').then( m => m.RightspeakerPageModule)
-  },
+  
+  
 ];
 
 @NgModule({
